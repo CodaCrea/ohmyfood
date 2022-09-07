@@ -135,11 +135,6 @@ footer a {
   position: relative;
   margin-top: 400px;
 }
-@media (max-width: 1024px) {
-  #main_footer {
-    margin-top: 300px;
-  }
-}
 @media (max-width: 767px) {
   #main_footer {
     margin-top: 180px;
@@ -150,6 +145,7 @@ footer a {
   background-color: #fff;
   border-radius: 50px 50px 0 0;
   padding-top: 20px;
+  padding-right: 20px;
   padding-bottom: 100px;
 }
 .category--title_main {
@@ -161,13 +157,13 @@ footer a {
 
 .regular-heart {
   font-size: 25px;
+  padding-right: 20px;
 }
 
 .solid-heart {
   position: absolute;
   font-size: 25px;
-  right: 50px;
-  color: transparent;
+  right: 40px;
   background-clip: text;
 }
 
@@ -288,7 +284,6 @@ footer a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 30px;
   padding-left: 10px;
 }
 
