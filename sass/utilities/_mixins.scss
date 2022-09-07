@@ -1,0 +1,21 @@
+// DESKTOP HEADER IMG SUBTITLE
+@mixin desktop-img_subtitle {
+  @media (min-width: map-get($breakpoints, desktop)) {
+    height: 500px;
+    object-position: 0 80%;
+  }
+}
+
+// DESKTOP MOBILE MAIN CATEGORY
+@mixin mobile-main {
+  @media (max-width: map-get($breakpoints, mobile)) {
+    margin-top: 180px;
+  }
+}
+
+// DESKTOP TABLET MAIN CATEGORY
+@mixin tablet-main {
+  @media (max-width: map-get($breakpoints, tablet)) {
+    margin-top: 300px;
+  }
+}

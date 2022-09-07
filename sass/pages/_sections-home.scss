@@ -1,0 +1,58 @@
+@media (max-width: 767px) {
+  // SECTION LOCATION
+  .location {
+    background-color: $background-primary;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+    &--i {
+      font-size: 20px;
+    }
+
+    &--span {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+  }
+
+  // SECTION DICOVERY
+  .discovery {
+    background-color: $background-secondary;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 40px 50px;
+
+    &--title {
+      margin-bottom: 0;
+    }
+
+    &--btn {
+      margin: 20px auto 0;
+    }
+  }
+
+  // SECTION FUNCTIONING
+  .functioning {
+    margin: 0 20px;
+
+    &--title {
+      margin: 50px 0 30px 20px;
+    }
+  }
+
+  // SECTION RESTAURANT
+  .restaurants {
+    background-color: $background-secondary;
+    margin-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+
+    &--title {
+      padding-top: 40px;
+      padding-left: 20px;
+    }
+  }
+}
