@@ -1,0 +1,59 @@
+.meal {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px $shadow;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s;
+
+  &--description {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &--description h3 {
+    margin: 10px 0 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &--description p {
+    margin: 3px 0 10px 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &--price_check {
+    display: flex;
+  }
+
+  &--price {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+
+  &--check {
+    background-color: #99e2d0;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 0 15px 15px 0;
+    margin-right: -40px;
+  }
+
+  &--icon {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+.meal:hover {
+  padding-right: 40px;
+  transition: 0.5s;
+}

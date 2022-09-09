@@ -2,14 +2,19 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+$color-gradient: linear-gradient(#ff79da, #9356dc);
 $background-primary: #e3e3e3;
 $background-secondary: #f4f4f4;
 $background-tertiary: #fafafa;
 $shadow: #00000066;
 
+// FONT
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Shrikhand", sans-serif;
+
 // Maps
 $breakpoints: (
-  "mobile": 767px,
-  "tablet": 1024px,
-  "desktop": 1025px,
+  "tablet-min": 768px,
+  "tablet-max": 1024px,
+  "desktop-min": 1025px,
 );
