@@ -1,8 +1,6 @@
 #main_footer {
   position: relative;
   margin-top: 180px;
-  @include tablet-main;
-  @include desktop-main;
 }
 
 .category {
@@ -55,6 +53,7 @@
 }
 
 .heart {
+  display: flex;
   font-size: 25px;
   margin-right: 10px;
   cursor: pointer;
@@ -64,6 +63,8 @@
     color: transparent;
   }
 }
+
+////////// HOVER & ANIMATION //////////
 
 .heart:hover {
   background: $color-gradient;

@@ -1,28 +1,20 @@
-// MOBILE LOCATION
-@mixin mobile-location {
-  @media (max-width: map-get($breakpoints, mobile)) {
-    background-color: $background-primary;
+// BREAKPOINTS TABLET & DESKTOP
+@mixin tablet-desktop {
+  @media screen and (min-width: map-get($breakpoints, tablet-min)) {
+    @content;
   }
 }
 
-// TABLET MAIN
-@mixin tablet-main {
+// BREAKPOINTS TABLET
+@mixin tablet-only {
   @media (min-width: map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)) {
-    margin-top: 300px;
+    @content;
   }
 }
 
-// DESKTOP HEADER IMG SUBTITLE
-@mixin desktop-main {
-  @media (min-width: map-get($breakpoints, desktop-min)) {
-    margin-top: 400px;
-  }
-}
-
-// DESKTOP MAIN
-@mixin desktop-img_subtitle {
-  @media (min-width: map-get($breakpoints, desktop-min)) {
-    height: 500px;
-    object-position: 0 80%;
+// BREAKPOINT DESKTOP
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
   }
 }

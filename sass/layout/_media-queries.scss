@@ -1,5 +1,5 @@
-// TABLET & DESKTOP ACCUIEL HEADER
-@media screen and (min-width: 768px) {
+@include tablet-desktop {
+  // ACCUEIL HEADER
   .header {
     box-shadow: none;
 
@@ -11,7 +11,6 @@
       height: 380px;
       object-fit: cover;
       object-position: 0 80%;
-      @include desktop-img_subtitle;
     }
   }
 
@@ -21,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 5%;
-    border-bottom: dashed 4px $background-secondary;
+    border-bottom: dashed 4px $background-primary;
   }
 
   .location {
@@ -35,23 +34,169 @@
     &--i {
       font-size: 25px;
       position: absolute;
-      margin-top: -130px;
+      margin-top: -145px;
       margin-left: -10px;
     }
 
     &--span {
       font-size: 22px;
       position: absolute;
-      margin-left: -70px;
-      margin-top: -90px;
+      margin-left: 0;
+      margin-top: -110px;
     }
   }
 
-  // TABLET & DESKTOP ACCUEIL DISCOVERY
+  // ACCUEIL SECTION & ARTICLE
+  .discovery {
+    background-color: #fff;
+  }
+
+  .functioning {
+    background-color: $background-secondary;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 50%;
+    text-align: center;
+    border-right: dashed 4px $background-primary;
+    padding: 30px 200px 30px;
+  }
+
+  .listing {
+    display: flex;
+    flex-direction: column;
+
+    &--number {
+      margin: -20px auto 10px;
+    }
+
+    &--span {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .restaurants {
+    margin-top: 0;
+
+    &--title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
+
+  .eatery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &--card {
+      width: 40%;
+    }
+  }
+
+  // MENUS SECTION & ARTICLE
+  #main_footer {
+    margin-top: 300px;
+  }
+
+  .category {
+    &--title_main {
+      justify-content: center;
+    }
+
+    &--container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &--section {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 25%;
+    }
+  }
+
+  .heart {
+    margin-left: 20px;
+  }
+
+  // FOOTER
+  .footer {
+    &--title {
+      text-align: center;
+      padding: 20px 0 20px;
+    }
+
+    &--nav {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0;
+    }
+  }
+}
+
+////////////////// TABLET ///////////////////
+
+@include tablet-only {
+  // ACCUEIL SECTION & ARTICLE
   .discovery {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 20px;
+    text-align: justify;
+    padding-top: 20px 20px;
+
+    &--title {
+      width: 60%;
+    }
+  }
+
+  .restaurants {
+    background-color: #fff;
+  }
+
+  .eatery {
+    column-gap: 30px;
+  }
+}
+
+/////////////////// DESKTOP ///////////////////
+
+@include desktop-only {
+  // ACCUEIL SECTION & ARTICLE
+  .discovery_functioning {
+    display: flex;
+    order: 1;
+    border-bottom: dashed 4px $background-primary;
+    margin: 0;
+  }
+
+  .functioning {
+    border-right: dashed 4px $background-primary;
+  }
+
+  .discovery {
+    flex: 1 0 50%;
+    order: 2;
+    justify-content: center;
+    padding: 0;
+
+    &--title {
+      padding-bottom: 50px;
+    }
+  }
+
+  .restaurants {
+    background-color: $background-tertiary;
+  }
+
+  .eatery {
+    gap: 80px;
+
+    &--img {
+      height: 300px;
+      object-position: 50% 80%;
+    }
   }
 }

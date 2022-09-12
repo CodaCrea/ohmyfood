@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Shrikhand&display=swap");
+.meal:hover {
+  padding-right: 40px;
+  transition: 0.5s;
+}
+
+.eatery--card:hover {
+  transform: scale(1.03);
+  transition: 0.5s;
+}
+
+.footer a:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -86,16 +101,6 @@ footer a {
   position: relative;
   margin-top: 180px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  #main_footer {
-    margin-top: 300px;
-  }
-}
-@media (min-width: 1025px) {
-  #main_footer {
-    margin-top: 400px;
-  }
-}
 
 .category {
   background-color: #f4f4f4;
@@ -141,6 +146,7 @@ footer a {
 }
 
 .heart {
+  display: flex;
   font-size: 25px;
   margin-right: 10px;
   cursor: pointer;
@@ -202,11 +208,6 @@ footer a {
   padding: 10px;
 }
 
-.meal:hover {
-  padding-right: 40px;
-  transition: 0.5s;
-}
-
 .footer {
   background-color: #363636;
   display: flex;
@@ -226,74 +227,14 @@ footer a {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    box-shadow: none;
-  }
-  .header--img {
-    width: 300px;
-  }
-  .header--img_subtitle {
-    height: 380px;
-    object-fit: cover;
-    object-position: 0 80%;
-  }
+.footer a {
+  transition: 0.5s;
 }
-@media screen and (min-width: 768px) and (min-width: 1025px) {
-  .header--img_subtitle {
-    height: 500px;
-    object-position: 0 80%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header_location {
-    background-color: #fafafa;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 5%;
-    border-bottom: dashed 4px #f4f4f4;
-  }
-}
-@media screen and (min-width: 768px) {
-  .location {
-    background-color: #fafafa;
-    width: 0;
-    height: 0;
-    border-top: 150px solid #e3e3e3;
-    border-right: 200px solid transparent;
-    border-left: 200px solid transparent;
-  }
-  .location--i {
-    font-size: 25px;
-    position: absolute;
-    margin-top: -130px;
-    margin-left: -10px;
-  }
-  .location--span {
-    font-size: 22px;
-    position: absolute;
-    margin-left: -70px;
-    margin-top: -90px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .discovery {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 20px;
-  }
-}
+
 .location {
   display: flex;
   justify-content: center;
   padding: 20px 0;
-}
-@media (max-width: ) {
-  .location {
-    background-color: #e3e3e3;
-  }
 }
 .location--i {
   font-size: 20px;
@@ -318,18 +259,18 @@ footer a {
 }
 
 .functioning {
-  margin: 0 20px;
+  padding: 50px 20px 0 25px;
 }
 .functioning--title {
-  margin: 50px 0 30px 20px;
+  padding: 0 0 30px 20px;
 }
 
 .restaurants {
   background-color: #f4f4f4;
-  margin-top: 60px;
-  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  padding: 0 20px 60px;
 }
 .restaurants--title {
   padding-top: 40px;
@@ -366,12 +307,16 @@ footer a {
   flex-direction: column;
   row-gap: 30px;
 }
+.eatery--card {
+  transition: 0.5s;
+}
 .eatery--figure {
   background-color: #fff;
   border-radius: 15px;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   padding-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 .eatery--img {
   width: 100%;
@@ -406,6 +351,162 @@ footer a {
 
 .delice {
   object-position: 50% 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    box-shadow: none;
+  }
+  .header--img {
+    width: 300px;
+  }
+  .header--img_subtitle {
+    height: 380px;
+    object-fit: cover;
+    object-position: 0 80%;
+  }
+  .header_location {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    border-bottom: dashed 4px #e3e3e3;
+  }
+  .location {
+    background-color: #fafafa;
+    width: 0;
+    height: 0;
+    border-top: 150px solid #e3e3e3;
+    border-right: 200px solid transparent;
+    border-left: 200px solid transparent;
+  }
+  .location--i {
+    font-size: 25px;
+    position: absolute;
+    margin-top: -145px;
+    margin-left: -10px;
+  }
+  .location--span {
+    font-size: 22px;
+    position: absolute;
+    margin-left: 0;
+    margin-top: -110px;
+  }
+  .discovery {
+    background-color: #fff;
+  }
+  .functioning {
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 50%;
+    text-align: center;
+    border-right: dashed 4px #e3e3e3;
+    padding: 30px 200px 30px;
+  }
+  .listing {
+    display: flex;
+    flex-direction: column;
+  }
+  .listing--number {
+    margin: -20px auto 10px;
+  }
+  .listing--span {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .restaurants {
+    margin-top: 0;
+  }
+  .restaurants--title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .eatery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .eatery--card {
+    width: 40%;
+  }
+  #main_footer {
+    margin-top: 300px;
+  }
+  .category--title_main {
+    justify-content: center;
+  }
+  .category--container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .category--section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+  }
+  .heart {
+    margin-left: 20px;
+  }
+  .footer--title {
+    text-align: center;
+    padding: 20px 0 20px;
+  }
+  .footer--nav {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .discovery {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: justify;
+    padding-top: 20px 20px;
+  }
+  .discovery--title {
+    width: 60%;
+  }
+  .restaurants {
+    background-color: #fff;
+  }
+  .eatery {
+    column-gap: 30px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .discovery_functioning {
+    display: flex;
+    order: 1;
+    border-bottom: dashed 4px #e3e3e3;
+    margin: 0;
+  }
+  .functioning {
+    border-right: dashed 4px #e3e3e3;
+  }
+  .discovery {
+    flex: 1 0 50%;
+    order: 2;
+    justify-content: center;
+    padding: 0;
+  }
+  .discovery--title {
+    padding-bottom: 50px;
+  }
+  .restaurants {
+    background-color: #fafafa;
+  }
+  .eatery {
+    gap: 80px;
+  }
+  .eatery--img {
+    height: 300px;
+    object-position: 50% 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
