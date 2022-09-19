@@ -1,4 +1,5 @@
 .btn_pink {
+  font-size: 16px;
   background: linear-gradient($color-secondary, $color-primary);
   color: #fff;
   border: none;
@@ -7,4 +8,12 @@
   height: 50px;
   box-shadow: 0 5px 10px $shadow;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn_pink:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 10px $shadow;
+  opacity: 0.8;
+  transition: 0.5s;
 }

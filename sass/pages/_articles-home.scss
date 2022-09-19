@@ -7,6 +7,7 @@
   margin-bottom: 30px;
   border-radius: 25px;
   box-shadow: 0 5px 10px $shadow;
+  transition: 0.5s;
 
   &--number {
     background-color: $color-primary;
@@ -23,6 +24,7 @@
   &--i {
     font-size: 22px;
     margin: 0 20px;
+    color: $shadow;
   }
 }
 
@@ -33,6 +35,8 @@
   row-gap: 30px;
 
   &--card {
+    position: relative;
+    border-radius: 15px;
     transition: 0.5s;
   }
 
@@ -50,6 +54,16 @@
     height: 180px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
+  }
+
+  &--news {
+    position: absolute;
+    background-color: #99e2d0;
+    color: #369658;
+    padding: 5px 10px;
+    top: 20px;
+    right: 20px;
+    font-weight: 700;
   }
 
   &--figcaption h2 {

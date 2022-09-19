@@ -1,12 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Shrikhand&display=swap");
-.meal:hover {
-  padding-right: 40px;
+.bloc {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to left top, rgba(146, 86, 220, 0.98), rgba(255, 121, 217, 0.98) 30%, rgba(255, 121, 217, 0.98) 70%, rgba(146, 86, 220, 0.98));
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  animation: endAnim;
+  animation-duration: 0.5s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+.bloc::before {
+  content: "";
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  left: 46.5%;
+  color: #9356dc;
+  font-weight: 700;
+  z-index: 2;
+  animation: percentAnim 1.6s linear;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+.bloc--loader {
+  position: relative;
+  background: url(/assets/logo/logo_onglet.ico) center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  z-index: 1;
+}
+.bloc--loader::before {
+  content: "";
+  background-color: transparent;
+  width: 180px;
+  height: 180px;
+  border-top: solid 5px #9356dc;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  animation: rotationAnim;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.listing:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
   transition: 0.5s;
+}
+
+.listing--i:hover {
+  color: #9356dc;
 }
 
 .eatery--card:hover {
   transform: scale(1.03);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
   transition: 0.5s;
+}
+.eatery--news {
+  animation: flashAnim;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.heart--solid:hover {
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  font-weight: 900;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  animation: heartAnim linear 0.5s;
 }
 
 .footer a:hover {
@@ -14,6 +88,203 @@
   transition: 0.5s;
 }
 
+.header--return:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.meal-anim01 {
+  animation: appearanceAnim;
+  animation-delay: 0.2s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal-anim02 {
+  animation: appearanceAnim;
+  animation-delay: 0.4s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal-anim03 {
+  animation: appearanceAnim;
+  animation-delay: 0.6s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal-anim04 {
+  animation: appearanceAnim;
+  animation-delay: 0.8s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal-anim05 {
+  animation: appearanceAnim;
+  animation-delay: 1s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal-anim06 {
+  animation: appearanceAnim;
+  animation-delay: 1.2s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal-anim07 {
+  animation: appearanceAnim;
+  animation-delay: 1.4s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal-anim08 {
+  animation: appearanceAnim;
+  animation-delay: 1.6s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal-anim09 {
+  animation: appearanceAnim;
+  animation-delay: 1.8s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal-anim10 {
+  animation: appearanceAnim;
+  animation-delay: 2s;
+  animation-duration: 0.8s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.meal:hover {
+  padding-right: 60px;
+  transition: 0.5s;
+}
+
+.meal:hover .meal--icon {
+  transform: rotate(0deg);
+  transition: 0.8s;
+}
+
+@keyframes endAnim {
+  from {
+    opacity: 100%;
+  }
+  to {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes rotationAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes percentAnim {
+  0% {
+    top: 45%;
+  }
+  5% {
+    content: "0%";
+    top: 50%;
+  }
+  10% {
+    content: "0%";
+  }
+  20% {
+    content: "0%";
+  }
+  25% {
+    content: "10%";
+  }
+  30% {
+    content: "20%";
+  }
+  35% {
+    content: "30%";
+  }
+  40% {
+    content: "40%";
+  }
+  50% {
+    content: "50%";
+  }
+  60% {
+    content: "50%";
+  }
+  60% {
+    content: "50%";
+  }
+  70% {
+    content: "50%";
+  }
+  80% {
+    content: "50%";
+  }
+  85% {
+    content: "60%";
+  }
+  90% {
+    content: "70%";
+  }
+  95% {
+    content: "80%";
+  }
+  97% {
+    content: "90%";
+  }
+  100% {
+    content: "100%";
+  }
+}
+@keyframes heartAnim {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+@keyframes flashAnim {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appearanceAnim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -57,6 +328,7 @@ footer a {
 }
 
 .btn_pink {
+  font-size: 16px;
   background: linear-gradient(#ff79da, #9356dc);
   color: #fff;
   border: none;
@@ -65,6 +337,14 @@ footer a {
   height: 50px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn_pink:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+  transition: 0.5s;
 }
 
 .header {
@@ -87,7 +367,12 @@ footer a {
 }
 .header--return {
   position: absolute;
-  left: 10px;
+  font-size: 23px;
+  padding-left: 15px;
+  transition: 0.5s;
+}
+.header--return_name {
+  display: none;
 }
 .header--img_subtitle {
   display: block;
@@ -136,13 +421,14 @@ footer a {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
+  margin-bottom: 40px;
 }
 .category--container_btn {
   margin-top: 50px;
   text-align: center;
 }
 .category--btn {
-  width: 160px;
+  width: 200px;
 }
 
 .heart {
@@ -153,11 +439,9 @@ footer a {
 }
 .heart--solid {
   position: absolute;
+  -webkit-background-clip: text;
+  font-weight: 900;
   color: transparent;
-}
-
-.heart:hover {
-  background: linear-gradient(#ff79da, #9356dc);
 }
 
 .meal {
@@ -176,12 +460,13 @@ footer a {
   overflow: hidden;
 }
 .meal--description h3 {
-  margin: 10px 0 0 5px;
+  margin: 15px 0 0 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .meal--description p {
-  margin: 3px 0 10px 5px;
+  margin: 5px 0 15px 10px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -191,8 +476,7 @@ footer a {
 .meal--price {
   display: flex;
   align-items: flex-end;
-  margin-left: 10px;
-  margin-right: 15px;
+  margin: 0 30px 15px 10px;
 }
 .meal--check {
   background-color: #99e2d0;
@@ -201,11 +485,13 @@ footer a {
   display: flex;
   align-items: center;
   border-radius: 0 15px 15px 0;
-  margin-right: -40px;
+  margin-right: -60px;
 }
 .meal--icon {
   font-size: 20px;
-  padding: 10px;
+  padding: 20px;
+  transform: rotateZ(-180deg);
+  transition: 0.8s;
 }
 
 .footer {
@@ -285,6 +571,7 @@ footer a {
   margin-bottom: 30px;
   border-radius: 25px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
 }
 .listing--number {
   background-color: #9356dc;
@@ -300,6 +587,7 @@ footer a {
 .listing--i {
   font-size: 22px;
   margin: 0 20px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .eatery {
@@ -308,6 +596,8 @@ footer a {
   row-gap: 30px;
 }
 .eatery--card {
+  position: relative;
+  border-radius: 15px;
   transition: 0.5s;
 }
 .eatery--figure {
@@ -323,6 +613,15 @@ footer a {
   height: 180px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
+}
+.eatery--news {
+  position: absolute;
+  background-color: #99e2d0;
+  color: #369658;
+  padding: 5px 10px;
+  top: 20px;
+  right: 20px;
+  font-weight: 700;
 }
 .eatery--figcaption h2 {
   margin: 10px 0 5px 0;
@@ -364,6 +663,20 @@ footer a {
     height: 380px;
     object-fit: cover;
     object-position: 0 80%;
+  }
+  .header--return {
+    position: absolute;
+    font-size: 23px;
+    padding-left: 30px;
+    transition: 0.5s;
+  }
+  .header--return_name {
+    display: inline;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-left: 6px;
+    color: #000;
+    transition: 0.5s;
   }
   .header_location {
     background-color: #fafafa;
@@ -440,12 +753,11 @@ footer a {
   }
   .category--container {
     display: flex;
-    flex-wrap: wrap;
   }
   .category--section {
     display: flex;
     flex-direction: column;
-    flex: 1 1 25%;
+    flex: 1 0 25%;
   }
   .heart {
     margin-left: 20px;
@@ -459,14 +771,25 @@ footer a {
     justify-content: space-around;
     padding: 0;
   }
+  .header--return:hover {
+    transform: scale(1.08) translateX(-15px);
+    transition: 0.5s;
+  }
+  .header--return_name:hover {
+    transform: scale(1.08) translateX(-20px);
+    transition: 0.5s;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .bloc::before {
+    left: 48.5%;
+  }
   .discovery {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     text-align: justify;
-    padding-top: 20px 20px;
+    padding: 20px 20px;
   }
   .discovery--title {
     width: 60%;
@@ -477,8 +800,16 @@ footer a {
   .eatery {
     column-gap: 30px;
   }
+  .category--container {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 @media screen and (min-width: 1025px) {
+  .bloc::before {
+    left: 49%;
+  }
   .discovery_functioning {
     display: flex;
     order: 1;
@@ -505,8 +836,17 @@ footer a {
   }
   .eatery--img {
     height: 300px;
-    object-position: 50% 80%;
+    object-position: 50% 61%;
   }
+  .france {
+    object-position: 50% 130%;
+  }
+  .delice {
+    object-position: 50% 120%;
+  }
+}
+.header--img_subtitle {
+  object-position: 50% 70%;
 }
 
 /*# sourceMappingURL=style.css.map */

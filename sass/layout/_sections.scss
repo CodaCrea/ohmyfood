@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+    margin-bottom: 40px;
   }
 
   &--container_btn {
@@ -48,7 +49,7 @@
   }
 
   &--btn {
-    width: 160px;
+    width: 200px;
   }
 }
 
@@ -60,12 +61,8 @@
 
   &--solid {
     position: absolute;
+    -webkit-background-clip: text;
+    font-weight: 900;
     color: transparent;
   }
-}
-
-////////// HOVER & ANIMATION //////////
-
-.heart:hover {
-  background: $color-gradient;
 }

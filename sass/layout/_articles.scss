@@ -15,13 +15,14 @@
   }
 
   &--description h3 {
-    margin: 10px 0 0 5px;
+    margin: 15px 0 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   &--description p {
-    margin: 3px 0 10px 5px;
+    margin: 5px 0 15px 10px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -33,8 +34,7 @@
   &--price {
     display: flex;
     align-items: flex-end;
-    margin-left: 10px;
-    margin-right: 15px;
+    margin: 0 30px 15px 10px;
   }
 
   &--check {
@@ -44,11 +44,13 @@
     display: flex;
     align-items: center;
     border-radius: 0 15px 15px 0;
-    margin-right: -40px;
+    margin-right: -60px;
   }
 
   &--icon {
     font-size: 20px;
-    padding: 10px;
+    padding: 20px;
+    transform: rotateZ(-180deg);
+    transition: 0.8s;
   }
 }
