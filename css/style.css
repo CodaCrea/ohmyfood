@@ -6,51 +6,52 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 1;
   animation: endAnim;
   animation-duration: 0.5s;
   animation-delay: 3s;
   animation-fill-mode: both;
+  z-index: 1;
+}
+.bloc--img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
 }
 .bloc::before {
+  position: absolute;
   content: "";
   font-size: 13px;
-  position: absolute;
-  top: 50%;
-  left: 46.5%;
   color: #9356dc;
   font-weight: 700;
-  z-index: 2;
+  top: 50%;
+  left: 46.2%;
   animation: percentAnim 1.6s linear;
   animation-delay: 1s;
   animation-fill-mode: both;
+  z-index: 3;
 }
 .bloc--loader {
   position: relative;
-  background: url(/assets/logo/logo_onglet.ico) center;
+  border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 50%;
-  height: 180px;
-  width: 180px;
-  border-radius: 50%;
-  height: 180px;
-  width: 180px;
-  z-index: 1;
 }
 .bloc--loader::before {
+  position: absolute;
   content: "";
   background-color: transparent;
-  width: 180px;
-  height: 180px;
-  border-top: solid 5px #9356dc;
+  width: 220px;
+  height: 220px;
+  border-top: solid 5px #fff;
+  border-right: solid 5px transparent;
   border-radius: 50%;
-  position: absolute;
-  top: -2px;
+  top: -1%;
+  left: -1%;
   animation: rotationAnim;
   animation-timing-function: linear;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+  z-index: 2;
 }
 
 .listing:hover {
@@ -782,7 +783,7 @@ footer a {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .bloc::before {
-    left: 48.5%;
+    left: 48%;
   }
   .discovery {
     flex-direction: row;
