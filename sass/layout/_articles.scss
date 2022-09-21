@@ -22,6 +22,7 @@
   }
 
   &--description p {
+    opacity: 0.7;
     margin: 5px 0 15px 10px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -44,12 +45,12 @@
     display: flex;
     align-items: center;
     border-radius: 0 15px 15px 0;
-    margin-right: -60px;
+    margin-right: -80px;
   }
 
   &--icon {
-    font-size: 20px;
-    padding: 20px;
+    font-size: 25px;
+    padding: 25px;
     transform: rotateZ(-180deg);
     transition: 0.8s;
   }

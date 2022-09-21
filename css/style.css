@@ -12,11 +12,6 @@
   animation-fill-mode: both;
   z-index: 1;
 }
-.bloc--img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-}
 .bloc::before {
   position: absolute;
   content: "";
@@ -30,9 +25,13 @@
   animation-fill-mode: both;
   z-index: 3;
 }
+.bloc--img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+}
 .bloc--loader {
   position: relative;
-  border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -55,12 +54,12 @@
 }
 
 .listing:hover {
-  transform: scale(1.1);
+  background-color: #fff0fb;
+  transform: scale(1.01);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
   transition: 0.5s;
 }
-
-.listing--i:hover {
+.listing:hover .listing--i {
   color: #9356dc;
 }
 
@@ -71,7 +70,7 @@
 }
 .eatery--news {
   animation: flashAnim;
-  animation-duration: 1s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
 }
 
@@ -79,6 +78,7 @@
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   font-weight: 900;
+  transform: scale(1.03);
   background-position: bottom;
   background-repeat: no-repeat;
   animation: heartAnim linear 0.5s;
@@ -175,7 +175,7 @@
 }
 
 .meal:hover {
-  padding-right: 60px;
+  padding-right: 80px;
   transition: 0.5s;
 }
 
@@ -271,8 +271,11 @@
   0% {
     opacity: 1;
   }
-  50% {
+  10% {
     opacity: 0;
+  }
+  20% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
@@ -294,15 +297,19 @@ body {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 28px;
 }
 
 h2 {
+  font-size: 25px;
+}
+
+h3 {
   font-size: 20px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 a {
@@ -357,7 +364,7 @@ footer a {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 .header--img {
-  width: 250px;
+  width: 200px;
 }
 .header--title {
   margin: 0 auto;
@@ -467,6 +474,7 @@ footer a {
   white-space: nowrap;
 }
 .meal--description p {
+  opacity: 0.7;
   margin: 5px 0 15px 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -486,11 +494,11 @@ footer a {
   display: flex;
   align-items: center;
   border-radius: 0 15px 15px 0;
-  margin-right: -60px;
+  margin-right: -80px;
 }
 .meal--icon {
-  font-size: 20px;
-  padding: 20px;
+  font-size: 25px;
+  padding: 25px;
   transform: rotateZ(-180deg);
   transition: 0.8s;
 }
@@ -499,16 +507,12 @@ footer a {
   background-color: #363636;
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
-}
-.footer--title {
-  padding: 10px 0 10px 30px;
+  padding: 10px 0 20px 30px;
 }
 .footer--nav {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  padding-left: 30px;
 }
 .footer--nav i {
   margin-right: 10px;
@@ -519,6 +523,7 @@ footer a {
 }
 
 .location {
+  background-color: #e3e3e3;
   display: flex;
   justify-content: center;
   padding: 20px 0;
@@ -536,10 +541,11 @@ footer a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 25px 40px 50px;
+  padding: 25px 30px 50px;
 }
-.discovery--title {
-  margin-bottom: 0;
+.discovery--title p {
+  opacity: 0.7;
+  margin-top: 10px;
 }
 .discovery--btn {
   margin: 20px auto 0;
@@ -549,7 +555,7 @@ footer a {
   padding: 50px 20px 0 25px;
 }
 .functioning--title {
-  padding: 0 0 30px 20px;
+  padding-bottom: 10px;
 }
 
 .restaurants {
@@ -557,11 +563,11 @@ footer a {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  padding: 0 20px 60px;
+  padding: 0 30px 60px;
 }
 .restaurants--title {
   padding-top: 40px;
-  padding-left: 20px;
+  margin-bottom: 20px;
 }
 
 .listing {
@@ -606,7 +612,7 @@ footer a {
   border-radius: 15px;
   margin: 0 auto;
   width: 100%;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 .eatery--img {
@@ -624,17 +630,14 @@ footer a {
   right: 20px;
   font-weight: 700;
 }
-.eatery--figcaption h2 {
-  margin: 10px 0 5px 0;
-}
-.eatery--figcaption p {
-  margin: 0;
-}
 .eatery--figcaption {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 10px;
+}
+.eatery--figcaption h3 {
+  padding-top: 5px;
 }
 
 .palette {
@@ -783,7 +786,7 @@ footer a {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .bloc::before {
-    left: 48%;
+    left: 48.5%;
   }
   .discovery {
     flex-direction: row;

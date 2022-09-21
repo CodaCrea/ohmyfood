@@ -137,6 +137,17 @@ h1 {
   font-size: 2em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 5px 0;
+  padding: 0;
+}
+
 /**
  * Address styling not present in IE 8/9.
  */

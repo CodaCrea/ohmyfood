@@ -18,12 +18,6 @@
   animation-fill-mode: both;
   z-index: 1;
 
-  &--img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-  }
-
   &::before {
     position: absolute;
     content: "";
@@ -36,6 +30,12 @@
     animation-delay: 1s;
     animation-fill-mode: both;
     z-index: 3;
+  }
+
+  &--img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
   }
 
   &--loader {
@@ -65,15 +65,17 @@
 
 //////// HOVER ANIMATION /////////
 // ACCUEIL SECTION & ARTICLE
+.listing {
+  &:hover {
+    background-color: #fff0fb;
+    transform: scale(1.01);
+    box-shadow: 0 10px 10px $shadow;
+    transition: 0.5s;
+  }
 
-.listing:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 10px $shadow;
-  transition: 0.5s;
-}
-
-.listing--i:hover {
-  color: $color-primary;
+  &:hover .listing--i {
+    color: $color-primary;
+  }
 }
 
 .eatery {
@@ -85,7 +87,7 @@
 
   &--news {
     animation: flashAnim;
-    animation-duration: 1s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
   }
 }
@@ -94,6 +96,7 @@
   background: linear-gradient($color-primary, $color-secondary);
   -webkit-background-clip: text;
   font-weight: 900;
+  transform: scale(1.03);
   background-position: bottom;
   background-repeat: no-repeat;
   animation: heartAnim linear 0.5s;
@@ -184,7 +187,7 @@
 }
 
 .meal:hover {
-  padding-right: 60px;
+  padding-right: 80px;
   transition: 0.5s;
 }
 
@@ -290,8 +293,12 @@
     opacity: 1;
   }
 
-  50% {
+  10% {
     opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
   }
 
   100% {
