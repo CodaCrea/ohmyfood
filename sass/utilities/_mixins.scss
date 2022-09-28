@@ -1,11 +1,11 @@
-// BREAKPOINTS TABLET & DESKTOP
+// BREAKPOINT TABLET & DESKTOP
 @mixin tablet-desktop {
   @media screen and (min-width: map-get($breakpoints, tablet-min)) {
     @content;
   }
 }
 
-// BREAKPOINTS TABLET
+// BREAKPOINT TABLET
 @mixin tablet-only {
   @media (min-width: map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)) {
     @content;
